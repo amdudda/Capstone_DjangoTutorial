@@ -5,6 +5,6 @@ from .models import Somali_German_Dictionary as SD
 # Create your views here.
 
 def index(request):
-    all_words = SD.objects.all().order_by('-somali and -German')
+    all_words = SD.objects.all().order_by('-somali', '-German')
     context = {'dictionary': all_words }
     return render(request,'dictionary/index.html',context)
