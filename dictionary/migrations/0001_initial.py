@@ -14,10 +14,10 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='SomaliDictionary',
+            name='Somali_German_Dictionary',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('somali', models.CharField(max_length=100, verbose_name='Somali')),
+                ('somali', models.CharField(max_length=100, verbose_name='Somali')),('German', models.CharField(max_length=100, verbose_name='German')),
                 ('english', models.CharField(blank=True, max_length=100, null=True, verbose_name='English')),
             ],
         ),
