@@ -14,4 +14,4 @@ class Somali_German_Dictionary(models.Model):
 
     def __str__(self):
         ''' This returns a string listing the contents of a dictionary entry. '''
-        return (self.somali + " = " + self.english + "=" + str(self.German))
+        return (self.somali + " = " + self.english + " = " + str(self.German))
