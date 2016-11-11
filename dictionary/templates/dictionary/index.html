@@ -5,6 +5,15 @@
     <title>Somali-German-English Dictionary</title>
 </head>
 <body>
+<form action="{% url 'search'  %}" method="POST">
+    {% csrf_token %}
+    Search for: <input name="searchfor" type="text" size="25" />
+    In language: <input type="radio" name="language" value="english" checked="true"/> English
+     <input type="radio" name="language" value="somali"/> Somali
+     <input type="radio" name="language" value="German"/> German <br />
+    <input type="submit" value="Search" />  or <a href="{% url 'index' %}">Back to entire dictionary.</a>
+</form>
+
 <h1>Welcome to a Somali and German-English Dictionary!</h1>
 
 {# For this first example, we're just going to print everything!#}
