@@ -16,9 +16,20 @@
 
 <h1>Welcome to a Somali and German-English Dictionary!</h1>
 
-{# For this first example, we're just going to print everything!#}
+{# Let's heck for data - if none, report that, otherwise print out a nice table. #}
+{% if not dictionary %}
+    <strong>No results found!</strong>
+{% else %}
+<table>
+    <tr>
+    <th>Somali</th><th>English</th><th>German</th>
+    </tr>
 {% for entry in dictionary %}
-    {{ entry }}<br/>
+    <tr>
+        <td>{{ entry.somali }}</td><td>{{ entry.english }}</td><td>{{ entry.German }}</td>
+    </tr>
 {% endfor %}
+</table>
+{% endif %}
 </body>
 </html>
